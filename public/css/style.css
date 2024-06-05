@@ -1,0 +1,95 @@
+td:last-of-type {
+  width: 120px;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  display: none;
+  min-width: 200px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  user-select: none;
+}
+
+.t-green {
+  background-color: #76ff4d;
+  color: #000000;
+}
+
+.t-red {
+  background-color: #ff4321;
+  color: #ebebeb;
+}
+
+.cs-tooltip {
+  position: relative;
+}
+
+.cs-tooltip .cs-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -60px; /* Center the cs-tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cs-tooltip:hover .cs-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+/* overrides to bootstrap */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
