@@ -93,3 +93,33 @@ td:last-of-type {
   align-items: center;
   justify-content: center;
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+  height: 8px !important;
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  height: 8px !important;
+  width: 8px;
+  border-radius: 6px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3c3c3 !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b2b2 !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
